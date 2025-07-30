@@ -2094,8 +2094,12 @@ div#home .slide.three img {
     top: 30px;
     height: fit-content;
   }
+  section div#home .homeSlider .slide.two {
+    padding-top: 1.2rem;
+  }
   section div#home .homeSlider .slide.one .images {
     height: 30%;
+    padding-top: 1.2rem;
   }
   section div#home .homeSlider .slide.one .bgBut {
     width: 100%;

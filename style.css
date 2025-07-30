@@ -2097,6 +2097,15 @@ div#home .slide.three img {
   section div#home .homeSlider .slide.two {
     padding-top: 1.2rem;
   }
+  section div#home .homeSlider .slide.one .content {
+    font-size: 1.5rem;
+  }
+  section div#home .homeSlider .slide.one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
   section div#home .homeSlider .slide.one .images {
     height: 30%;
     padding-top: 1.2rem;
@@ -2169,7 +2178,6 @@ div#home .slide.three img {
     text-align: center;
   }
 
-
   .portfolioBox {
     height: auto;
   }
@@ -2178,5 +2186,11 @@ div#home .slide.three img {
   }
   section div#portfolio::before {
     height: 55%;
+  }
+
+  section div#home .homeSlider .slide.two .content .box {
+    max-width: calc(100% / 2.3);
+    max-height: calc(100% / 10);
+    font-size: 1rem;
   }
 }

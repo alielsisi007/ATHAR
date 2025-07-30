@@ -2198,4 +2198,9 @@ div#home .slide.three img {
     max-width: 780px;
     width: 98vw;
   }
+  section div#services .content .box {
+    max-width: calc(100% / 3);
+    max-height: calc(100% / 7);
+    font-size: 1rem;
+  }
 }

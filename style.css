@@ -2127,7 +2127,7 @@ div#home .slide.three img {
   }
 
   section div#about .content {
-    height: 75%;
+    height: 70%;
   }
   section div#about .content .text p {
     font-size: 1rem;
@@ -2146,7 +2146,7 @@ div#home .slide.three img {
     height: fit-content;
   }
   .portfolioBox {
-    height: fit-content;
+    height: auto;
   }
   header {
     position: fixed !important;

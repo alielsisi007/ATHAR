@@ -2130,14 +2130,43 @@ div#home .slide.three img {
     height: 70%;
   }
   section div#about .content .text p {
+    font-size: 0.8rem;
+  }
+  section div#portfolio {
+    margin-top: 70px;
+    padding-top: 70px;
+    width: 100%;
+    height: calc(400vh + 70px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .section div#portfolio .content .portfolioText {
+    gap: 1rem;
+  }
+  .section div#portfolio .content .portfolioText p {
     font-size: 1rem;
+  }
+  .section div#portfolio .content .portfolioText h2 {
+    font-size: 1.8rem;
   }
   .company-description {
     text-align: center;
   }
+  section div#portfolio .content .boxs .portfolioBox h3 {
+    font-size: 0.8rem;
+  }
   .services-section {
     text-align: center;
   }
+
+  section div#portfolio .portfolioContent {
+    height: 185vh;
+  }
+
   .services-list {
     text-align: center;
   }

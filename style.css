@@ -2137,11 +2137,14 @@ div#home .slide.three img {
   .services-list {
     text-align: center;
   }
+
+  .box {
+    height: fit-content;
+  }
+  .portfolioBox {
+    height: fit-content;
+  }
   header {
     position: fixed !important;
   }
-}
-
-header {
-  position: fixed !important;
 }

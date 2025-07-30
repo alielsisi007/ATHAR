@@ -2115,10 +2115,7 @@ div#home .slide.three img {
     width: 6rem;
   }
   section div#home .homeSlider .slide.one .images p {
-    top: 100%;
-    left: 40%;
-
-    width: 100%;
+    display: none;
   }
 
   div#home .slide.three img {

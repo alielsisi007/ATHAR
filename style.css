@@ -1,3 +1,12 @@
+/* Always keep header fixed on all screen sizes */
+header {
+  position: fixed !important;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 40000;
+}
 @font-face {
   font-family: "Bukra";
   src: url("assts/Fonst/29ltbukralight.ttf") format("truetype");
@@ -1774,10 +1783,10 @@ footer {
     width: 100%;
   }
   .container header {
-    width: 100vw;
+    /* width: 100vw; */
     justify-content: space-around;
     gap: 20%;
-    position: absolute;
+
     left: 50%;
     transform: translateX(-50%);
   }
@@ -1925,4 +1934,214 @@ footer {
   header .nav.mob.show {
     top: 30px;
   }
+}
+
+body .container {
+  max-width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 6rem;
+  }
+  header a {
+    font-size: 4rem;
+  }
+  header .logo img {
+    max-width: 5rem;
+    max-height: 100%;
+    width: 100px;
+  }
+  header .logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 5rem;
+  }
+  div#home .bgBut img {
+    width: 50rem;
+  }
+  div#home .bgBut p {
+    left: 100%;
+    width: 50%;
+    font-size: 4rem;
+  }
+  div#home .bgBut h2 {
+    font-size: 15rem;
+  }
+
+  section div#about .content .text p {
+    font-size: 5rem;
+  }
+  section div#about .content .text h2 {
+    font-size: 10rem;
+  }
+  section .content {
+    gap: 5rem;
+  }
+  section .content .box {
+    font-size: 5rem;
+    border: 10px solid;
+  }
+  section div#portfolio .texthead p {
+    font-size: 5rem;
+  }
+  .texthead h1 {
+    font-size: 10rem;
+  }
+  section div#portfolio .content .portfolioText p {
+    font-size: 4rem;
+  }
+  section div#portfolio .content .portfolioText h2 {
+    font-size: 8rem;
+  }
+  section div#portfolio .content .portfolioBox p {
+    font-size: 4rem;
+  }
+  section div#portfolio .content .portfolioBox h3 {
+    font-size: 6rem;
+  }
+
+  div#portfolio .portfolioSlider .sliderLogos .btnCont-logos button {
+    font-size: 8rem;
+  }
+  div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands button {
+    font-size: 10rem;
+  }
+  .sliderOutDoor .btnCont-outDoor button {
+    font-size: 10rem;
+  }
+  .company-info p {
+    font-size: 4rem;
+  }
+  .company-info h2 {
+    font-size: 10rem;
+  }
+  .footerContent {
+    width: 100vw;
+  }
+  .footer-left img {
+    width: 20rem;
+  }
+  .footer-left .social-media a {
+    width: calc(100% / 10);
+    height: 10rem;
+    font-size: 8rem;
+  }
+  .footer-left {
+    max-width: 50%;
+  }
+  .footer-left .company-info {
+    width: 100%;
+  }
+  .footerContent {
+    width: 100%;
+    max-width: 90%;
+  }
+  .footer-right {
+    width: 50%;
+    max-width: 50%;
+  }
+  .services-section ul {
+    width: 100%;
+    gap: 1rem;
+  }
+  .services-list li::before {
+    right: -1rem;
+  }
+  .services-section ul li {
+    font-size: 4rem;
+  }
+  .services-section h3 {
+    font-size: 10rem;
+  }
+  .watsApp {
+    right: 15rem;
+    bottom: 15rem;
+  }
+  .watsApp a {
+    width: 12rem;
+    height: 12rem;
+    font-size: 8rem;
+    border: solid 1rem;
+  }
+  div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands button:hover {
+    font-size: 13rem;
+  }
+  div#portfolio .portfolioSlider .sliderLogos .btnCont-logos button:hover {
+    font-size: 13rem;
+  }
+  .sliderOutDoor .btnCont-outDoor button:hover {
+    font-size: 13rem;
+  }
+  div#home .slide.three img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+div#home .slide.three img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 780px) {
+  header .nav.mob.show {
+    top: 30px;
+    height: fit-content;
+  }
+  section div#home .homeSlider .slide.one .images {
+    height: 30%;
+  }
+  section div#home .homeSlider .slide.one .bgBut {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+  }
+
+  section div#home .homeSlider .slide.one .bgBut h2 {
+    font-size: 2rem;
+  }
+
+  section div#home .homeSlider .slide.one .images img.bg {
+    width: 6rem;
+  }
+  section div#home .homeSlider .slide.one .images p {
+    top: 100%;
+    left: 40%;
+
+    width: 100%;
+  }
+
+  div#home .slide.three img {
+    width: 100%;
+    height: auto;
+  }
+
+  section div#about .content {
+    height: 75%;
+  }
+  section div#about .content .text p {
+    font-size: 1rem;
+  }
+  .company-description {
+    text-align: center;
+  }
+  .services-section {
+    text-align: center;
+  }
+  .services-list {
+    text-align: center;
+  }
+  header {
+    position: fixed !important;
+  }
+}
+
+header {
+  position: fixed !important;
 }

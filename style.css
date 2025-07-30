@@ -2136,17 +2136,18 @@ div#home .slide.three img {
     margin-top: 70px;
     padding-top: 70px;
     width: 100%;
-    height: calc(400vh + 70px);
+    height: calc(356vh + 70px);
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
     flex-wrap: wrap;
   }
   .section div#portfolio .content .portfolioText {
     gap: 1rem;
   }
+
   .section div#portfolio .content .portfolioText p {
     font-size: 1rem;
   }
@@ -2179,5 +2180,8 @@ div#home .slide.three img {
   }
   header {
     position: fixed !important;
+  }
+  section div#portfolio::before {
+    height: 55%;
   }
 }

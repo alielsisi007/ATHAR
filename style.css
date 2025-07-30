@@ -2193,4 +2193,9 @@ div#home .slide.three img {
     max-height: calc(100% / 10);
     font-size: 1rem;
   }
+  .container {
+    min-width: 300px;
+    max-width: 780px;
+    width: 98vw;
+  }
 }

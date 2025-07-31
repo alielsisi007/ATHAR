@@ -47,9 +47,11 @@ body {
   overflow-x: hidden;
   margin: 0%;
   padding: 0%;
-  /* width: 100%; */
+  width: 100vw;
   box-sizing: border-box;
-  /* font-family: "Noto Kufi Arabic", sans-serif; */
+  display: flex;
+  align-items: start;
+  justify-content: center;
   position: relative;
 }
 .container {
@@ -58,15 +60,17 @@ body {
   align-items: center;
   justify-content: center;
   /* Remove position: absolute; */
-  position: relative;
+  position: absolute;
   margin: 0 auto;
   /* Remove top, left, transform */
   flex-wrap: wrap;
   height: fit-content;
-  width: 100vw !important;
+  width: 98%;
   padding-top: 80px; /* Adjust if your header height changes */
 }
-
+section {
+  width: 98%;
+}
 a {
   text-decoration: none;
   color: #fff;
@@ -473,13 +477,6 @@ header .nav li.active {
     width: 95%;
   }
 
-  section div#about .content img {
-    width: 85%;
-    height: auto;
-    max-height: 35vh;
-    object-fit: cover;
-  }
-
   section div#about .content .text {
     width: 100%;
     height: auto;
@@ -507,12 +504,6 @@ header .nav li.active {
     flex-wrap: wrap;
     gap: 0.5rem;
     width: 95%;
-  }
-
-  section div#services .content .box {
-    max-width: calc(95% / 2);
-    font-size: 0.8rem;
-    padding: 0.5rem;
   }
 
   /* Portfolio Section Mobile */
@@ -628,13 +619,6 @@ header .nav li.active {
   .services-list li {
     font-size: 0.9rem;
     text-align: center;
-  }
-
-  /* Text Headers Mobile */
-  section .texthead {
-    width: 95%;
-    height: auto;
-    padding: 1rem 0;
   }
 
   section .texthead h1 {
@@ -1093,7 +1077,7 @@ section div#about .content {
 }
 section div#about .content img {
   width: 30%;
-  height: auto;
+  height: 55%;
   border: #30b34a solid 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
@@ -1796,23 +1780,14 @@ footer {
     flex-direction: column;
     position: relative;
   }
-  section div#home .homeSlider .slide.one .images {
-    position: absolute;
-    width: 100%;
-    height: 45%;
-    flex-direction: column;
-    top: 0;
-  }
+
   section div#home .homeSlider .slide.one .images img {
     width: 7rem;
   }
   section div#home .homeSlider .slide.one .images h2 {
     font-size: 3.5rem;
   }
-  section div#home .homeSlider .slide.one .images p {
-    left: 40%;
-    top: 66%;
-  }
+
   section div#home .homeSlider .slide.one .content {
     width: 100%;
     height: 50%;
@@ -1841,32 +1816,12 @@ footer {
     width: 100vw;
     background: repeat-y;
   }
-  section div#about .content {
-    flex-direction: row;
-    padding-top: 1rem;
-    gap: 0;
-  }
-  section div#about .content img {
-    width: 60%;
-    height: auto;
-  }
-  section div#about .content .text {
-    height: auto;
-    width: 100%;
-  }
 
   section div#services .content {
     flex-wrap: wrap;
     height: -webkit-fill-available;
   }
-  section div#services .content .box {
-    max-width: calc(100% / 3);
-    max-height: calc(100% / 7);
-    font-size: 1.2rem;
-  }
 
-  section div#portfolio .content {
-  }
   section div#portfolio .content .boxs {
     flex-wrap: wrap;
     width: 100%;
@@ -1896,20 +1851,24 @@ footer {
   }
   div#portfolio .portfolioSlider .sliderBrandes .brandesCont {
     height: 60vh;
-    width: 100vw;
+    width: 80vw;
   }
   div#portfolio .portfolioSlider .sliderBrandes .brandesCont img {
-    width: 80%;
+    width: 50%;
   }
   div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands {
     width: 100vw;
   }
   .sliderOutDoor {
-    height: 60vh;
+    height: 50vh;
     width: 100vw;
   }
+  .sliderOutDoor .outDoorCont {
+    width: 80vw;
+  }
+
   .sliderOutDoor .outDoorCont img {
-    width: 80%;
+    width: 50%;
     height: auto;
   }
   footer {
@@ -1941,7 +1900,7 @@ body .container {
   left: 50%;
   transform: translateX(-50%);
 }
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   h1 {
     font-size: 6rem;
   }
@@ -2082,7 +2041,7 @@ body .container {
     width: 100%;
     height: 100%;
   }
-}
+} */
 
 div#home .slide.three img {
   width: 100%;
@@ -2123,9 +2082,6 @@ div#home .slide.three img {
   section div#home .homeSlider .slide.one .images img.bg {
     width: 6rem;
   }
-  section div#home .homeSlider .slide.one .images p {
-    display: none;
-  }
 
   div#home .slide.three img {
     width: 100%;
@@ -2138,18 +2094,7 @@ div#home .slide.three img {
   section div#about .content .text p {
     font-size: 0.8rem;
   }
-  section div#portfolio {
-    margin-top: 70px;
-    padding-top: 70px;
-    width: 100%;
-    height: calc(356vh + 70px);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
+
   .section div#portfolio .content .portfolioText {
     gap: 1rem;
   }
@@ -2193,14 +2138,172 @@ div#home .slide.three img {
     max-height: calc(100% / 10);
     font-size: 1rem;
   }
-  .container {
-    min-width: 300px;
-    max-width: 780px;
-    width: 98vw;
+}
+
+/* media Screens styling  */
+@media (max-width: 575.98px) {
+  section div#home .homeSlider .slide.one {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  section div#home .homeSlider .slide.one .images {
+    height: 40vh;
+    justify-content: center;
+    flex-direction: column;
+  }
+  section div#home .homeSlider .slide.one .images img.bg {
+    width: 40%;
+  }
+  section div#home .homeSlider .slide.one .images h2 {
+    font-size: 3rem;
+  }
+
+  section div#home .homeSlider .slide.one .content {
+    height: 50vh;
+    align-items: center;
+    justify-content: end;
+  }
+  section div#home .homeSlider .slide.two .content {
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 90vh;
+  }
+  section div#home .homeSlider .slide.two .content .box {
+    max-width: calc(100% / 2.2);
+    max-height: calc(100% / 8);
+  }
+  .section div#about {
+    width: 100vw;
+  }
+  .container {
+    width: 97%;
+  }
+  div#portfolio .portfolioSlider .sliderBrandes .brandesCont {
+    width: 90vw;
+  }
+  div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands {
+    width: 91vw;
+    transition: all 0.5s;
+  }
+  div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands button:focus {
+    background-color: #30b34a;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+  div#portfolio .portfolioSlider .sliderOutDoor .outDoorCont {
+    width: 90vw;
+  }
+  div#portfolio .sliderOutDoor .btnCont-outDoor {
+    width: 91vw;
+    transition: all 0.5s;
+  }
+  div#portfolio .portfolioSlider .sliderOutDoor .btnCont-outDoor button:focus {
+    background-color: #30b34a;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+}
+@media (min-width: 576px) and (max-width: 769) {
+  .container {
+    width: 80%;
+  }
+  .content section {
+    width: 90%;
+  }
+  section div#home .homeSlider .slide.one {
+    height: 100vh;
+  }
+  section div#home .homeSlider .slide.one .images p {
+    top: 80%;
+    width: 100%;
+  }
+  .slide.one .images .bgBut p {
+    width: 100%;
+    top: 90%;
+  }
+  section div#home .homeSlider .slide.one .images {
+    height: 40%;
+    padding-top: 1.2rem;
+    align-items: end;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+
+  section div#about .content {
+    flex-direction: column;
+    width: 95%;
+  }
+  section div#about .content .text {
+    width: 50vw;
+  }
+
   section div#services .content .box {
     max-width: calc(100% / 3);
-    max-height: calc(100% / 7);
+    max-height: calc(100% / 8);
     font-size: 1rem;
+  }
+
+  section div#portfolio {
+    margin-top: 70px;
+    padding-top: 70px;
+    width: 100%;
+    height: 400vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section div#portfolio .texthead {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    text-align: center;
+    font-weight: 600;
+    border-bottom: none;
+    flex-wrap: wrap;
+  }
+  section div#portfolio .texthead {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: none;
+    flex-wrap: wrap;
+  }
+
+  section div#portfolio .content .boxs {
+    height: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  section div#portfolio .texthead {
+    height: 30%;
+  }
+  section div#portfolio .content .boxs {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  header .nav a {
+    font-size: 1.5rem;
+  }
+  section div#about .content img {
+    height: 70%;
   }
 }

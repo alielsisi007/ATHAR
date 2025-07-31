@@ -284,10 +284,6 @@ header .nav li.active {
     width: 100px;
   }
 
-  div#portfolio .portfolioSlider .brandesCont img {
-    width: 130px;
-  }
-
   header {
     padding: 0 15px;
   }
@@ -715,11 +711,6 @@ header .nav li.active {
     width: 98%;
   }
 
-  section div#services .content .box {
-    max-width: calc(98% / 2);
-    font-size: 0.7rem;
-  }
-
   /* Portfolio Section Small Mobile */
   section div#portfolio .content .portfolioBox {
     width: 98%;
@@ -906,7 +897,7 @@ section div#home .homeSlider .slide.one .images {
   height: 100%;
 }
 section div#home .homeSlider .slide.one img.bg {
-  width: 70%;
+  width: 40%;
   height: auto;
   max-height: calc(100% / 2);
   object-fit: cover;
@@ -1044,25 +1035,36 @@ section div#about {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+section .texthead::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 1px;
+  background-color: #ddddddef;
+  z-index: -200;
+  bottom: -2.5px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
 section .texthead {
-  width: 80%;
+  text-align: center;
+  color: #fff;
+  border-bottom: #30b34a solid 3px;
+  position: relative;
+  width: 20%;
   height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-weight: 600;
-  border-bottom: #ddddddef solid 1px;
-  z-index: 1000;
+  z-index: 10000;
   font-size: 2.2rem;
-}
-
-section .texthead h1 {
-  width: fit-content;
-  height: 100%;
-  text-align: center;
-  color: #fff;
-  border-bottom: #30b34a solid 3px;
 }
 
 section div#about .content {
@@ -1076,8 +1078,10 @@ section div#about .content {
   gap: 2rem;
 }
 section div#about .content img {
-  width: 30%;
-  height: 55%;
+  max-width: 50%;
+  width: auto;
+  max-height: 60%;
+  height: auto;
   border: #30b34a solid 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
@@ -1241,7 +1245,7 @@ section div#portfolio .texthead {
   border-bottom: none;
   flex-wrap: wrap;
 }
-section div#portfolio .texthead p {
+section div#portfolio .phead {
   width: 100%;
   height: 10%;
   text-align: center;
@@ -1487,7 +1491,7 @@ div#portfolio .portfolioSlider .sliderBrandes .brandesCont {
   position: relative;
 }
 .portfolioSlider .sliderBrandes img {
-  width: 50%;
+  width: 70%;
   height: fit-content;
   position: absolute;
   border-radius: 5px;
@@ -1552,7 +1556,7 @@ div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands button:hover {
   flex-wrap: wrap;
 }
 .sliderOutDoor .outDoorCont img {
-  width: 50%;
+  width: 70%;
   height: fit-content;
   position: absolute;
   border-radius: 5px;
@@ -1846,9 +1850,6 @@ footer {
     display: none;
   }
 
-  div#portfolio .portfolioSlider .sliderLogos .logoCont img {
-    width: calc(100% / 6.5);
-  }
   div#portfolio .portfolioSlider .sliderBrandes .brandesCont {
     height: 60vh;
     width: 80vw;
@@ -1900,148 +1901,6 @@ body .container {
   left: 50%;
   transform: translateX(-50%);
 }
-/* @media (min-width: 1440px) {
-  h1 {
-    font-size: 6rem;
-  }
-  header a {
-    font-size: 4rem;
-  }
-  header .logo img {
-    max-width: 5rem;
-    max-height: 100%;
-    width: 100px;
-  }
-  header .logo {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 5rem;
-  }
-  div#home .bgBut img {
-    width: 50rem;
-  }
-  div#home .bgBut p {
-    left: 100%;
-    width: 50%;
-    font-size: 4rem;
-  }
-  div#home .bgBut h2 {
-    font-size: 15rem;
-  }
-
-  section div#about .content .text p {
-    font-size: 5rem;
-  }
-  section div#about .content .text h2 {
-    font-size: 10rem;
-  }
-  section .content {
-    gap: 5rem;
-  }
-  section .content .box {
-    font-size: 5rem;
-    border: 10px solid;
-  }
-  section div#portfolio .texthead p {
-    font-size: 5rem;
-  }
-  .texthead h1 {
-    font-size: 10rem;
-  }
-  section div#portfolio .content .portfolioText p {
-    font-size: 4rem;
-  }
-  section div#portfolio .content .portfolioText h2 {
-    font-size: 8rem;
-  }
-  section div#portfolio .content .portfolioBox p {
-    font-size: 4rem;
-  }
-  section div#portfolio .content .portfolioBox h3 {
-    font-size: 6rem;
-  }
-
-  div#portfolio .portfolioSlider .sliderLogos .btnCont-logos button {
-    font-size: 8rem;
-  }
-  div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands button {
-    font-size: 10rem;
-  }
-  .sliderOutDoor .btnCont-outDoor button {
-    font-size: 10rem;
-  }
-  .company-info p {
-    font-size: 4rem;
-  }
-  .company-info h2 {
-    font-size: 10rem;
-  }
-  .footerContent {
-    width: 100vw;
-  }
-  .footer-left img {
-    width: 20rem;
-  }
-  .footer-left .social-media a {
-    width: calc(100% / 10);
-    height: 10rem;
-    font-size: 8rem;
-  }
-  .footer-left {
-    max-width: 50%;
-  }
-  .footer-left .company-info {
-    width: 100%;
-  }
-  .footerContent {
-    width: 100%;
-    max-width: 90%;
-  }
-  .footer-right {
-    width: 50%;
-    max-width: 50%;
-  }
-  .services-section ul {
-    width: 100%;
-    gap: 1rem;
-  }
-  .services-list li::before {
-    right: -1rem;
-  }
-  .services-section ul li {
-    font-size: 4rem;
-  }
-  .services-section h3 {
-    font-size: 10rem;
-  }
-  .watsApp {
-    right: 15rem;
-    bottom: 15rem;
-  }
-  .watsApp a {
-    width: 12rem;
-    height: 12rem;
-    font-size: 8rem;
-    border: solid 1rem;
-  }
-  div#portfolio .portfolioSlider .sliderBrandes .btnCont-brands button:hover {
-    font-size: 13rem;
-  }
-  div#portfolio .portfolioSlider .sliderLogos .btnCont-logos button:hover {
-    font-size: 13rem;
-  }
-  .sliderOutDoor .btnCont-outDoor button:hover {
-    font-size: 13rem;
-  }
-  div#home .slide.three img {
-    width: 100%;
-    height: 100%;
-  }
-} */
 
 div#home .slide.three img {
   width: 100%;
@@ -2089,7 +1948,7 @@ div#home .slide.three img {
   }
 
   section div#about .content {
-    height: 70%;
+    height: 80%;
   }
   section div#about .content .text p {
     font-size: 0.8rem;
@@ -2141,7 +2000,7 @@ div#home .slide.three img {
 }
 
 /* media Screens styling  */
-@media (max-width: 575.98px) {
+@media (max-width: 575) {
   section div#home .homeSlider .slide.one {
     height: 100vh;
     display: flex;
@@ -2151,19 +2010,26 @@ div#home .slide.three img {
   section div#home .homeSlider .slide.one .images {
     height: 40vh;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
   }
   section div#home .homeSlider .slide.one .images img.bg {
-    width: 40%;
+    width: 100% !important;
+  }
+  section div#home .homeSlider .slide.one .images img.bgBut {
+    width: 50%;
+  }
+  section div#home .homeSlider .slide.one .images p {
+    width: 100% !important;
+    top: 80%;
   }
   section div#home .homeSlider .slide.one .images h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
   section div#home .homeSlider .slide.one .content {
     height: 50vh;
     align-items: center;
-    justify-content: end;
+    justify-content: start;
   }
   section div#home .homeSlider .slide.two .content {
     flex-wrap: wrap;
@@ -2180,6 +2046,36 @@ div#home .slide.three img {
   .container {
     width: 97%;
   }
+
+  section div#about .content img {
+    width: 50% !important;
+    height: 35%;
+    border: #30b34a solid 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  section div#about .content {
+    width: 100%;
+    flex-direction: row;
+  }
+  section div#about .content .text {
+    width: 90%;
+  }
+  section div#about .content {
+    flex-direction: row;
+  }
+  section div#services .content .box {
+    max-width: calc(90% / 2.2);
+    max-height: calc(80% / 6);
+  }
+
+  div#portfolio .portfolioSlider .sliderLogos .logoCont {
+    gap: 10px;
+  }
+  div#portfolio .portfolioSlider .sliderBrandes .brandesCont img {
+    width: 80%;
+  }
   div#portfolio .portfolioSlider .sliderBrandes .brandesCont {
     width: 90vw;
   }
@@ -2191,6 +2087,9 @@ div#home .slide.three img {
     background-color: #30b34a;
     font-size: 1.4rem;
     color: #fff;
+  }
+  div#portfolio .portfolioSlider .sliderOutDoor .outDoorCont img {
+    width: 80%;
   }
   div#portfolio .portfolioSlider .sliderOutDoor .outDoorCont {
     width: 90vw;
@@ -2204,10 +2103,15 @@ div#home .slide.three img {
     font-size: 1.4rem;
     color: #fff;
   }
+
+  div#portfolio .portfolioSlider .sliderLogos .logoCont img {
+    width: calc(100% / 5);
+    margin: 0;
+  }
 }
-@media (min-width: 576px) and (max-width: 769) {
+@media (min-width: 576px) and (min-width: 768px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
   .content section {
     width: 90%;
@@ -2233,11 +2137,11 @@ div#home .slide.three img {
   }
 
   section div#about .content {
-    flex-direction: column;
+    flex-direction: row;
     width: 95%;
   }
   section div#about .content .text {
-    width: 50vw;
+    width: 90%;
   }
 
   section div#services .content .box {
@@ -2258,28 +2162,32 @@ div#home .slide.three img {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  section div#about .content img {
+    width: 40%;
+    height: 40%;
+  }
+  section div#about .content img {
+    width: 50%;
+    height: 35%;
+    border: #30b34a solid 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  div#portfolio .portfolioSlider .sliderLogos .btnCont-logos button {
+    display: none;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section div#portfolio .texthead {
     width: 100%;
-    height: 20%;
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 
-    text-align: center;
-    font-weight: 600;
-    border-bottom: none;
-    flex-wrap: wrap;
-  }
-  section div#portfolio .texthead {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
     text-align: center;
     font-weight: 600;
     border-bottom: none;
@@ -2288,17 +2196,71 @@ div#home .slide.three img {
 
   section div#portfolio .content .boxs {
     height: 100%;
+  }
+  section div#about .content {
+    width: 100%;
+    flex-direction: row;
+    height: 80%;
+  }
+  section div#about .content img {
+    width: 35%;
+    height: 40%;
+    border: #30b34a solid 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    object-fit: cover;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  section div#portfolio .texthead {
-    height: 30%;
-  }
   section div#portfolio .content .boxs {
     height: 100%;
   }
-}
+  section div#about .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  section div#about .content img {
+    width: 45%;
+    height: 60%;
+  }
+  section div#about .content .text {
+    width: 50%;
+    height: 90%;
+  }
+  section div#services .content .box {
+    max-width: calc(90% / 3.3);
+    max-height: calc(80% / 3.3);
+  }
+  .section div#portfolio .texthead {
+    height: 10% !important;
+  }
 
+  div#portfolio .portfolioSlider .sliderLogos .btnCont-logos .right {
+    right: 2rem;
+  }
+  div#portfolio .portfolioSlider .sliderLogos .btnCont-logos {
+    position: relative;
+    width: 90vw;
+    flex-wrap: wrap;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  section div#about .content {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+  section div#about .content img {
+    width: 40%;
+    height: 45%;
+  }
+}
+section div#portfolio .phead {
+  height: 5%;
+}
 @media (min-width: 1400px) {
   header .nav a {
     font-size: 1.5rem;
@@ -2306,4 +2268,20 @@ div#home .slide.three img {
   section div#about .content img {
     height: 70%;
   }
+}
+
+div#portfolio .portfolioSlider .sliderLogos .btnCont-logos .right {
+  right: 1rem;
+}
+div#portfolio .portfolioSlider .sliderLogos .btnCont-logos .left {
+  left: 0;
+}
+div#portfolio .portfolioSlider .sliderLogos .btnCont-logos {
+  position: relative;
+  width: 90vw;
+  /* flex-wrap: wrap; */
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

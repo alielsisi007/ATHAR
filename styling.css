@@ -1,0 +1,1152 @@
+@font-face {
+  font-family: "Bukra";
+  src: url("assts/Fonst/29ltbukralight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bukra";
+  src: url("assts/Fonst/29ltbukraregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bukra";
+  src: url("assts/Fonst/29ltbukrabold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bukra";
+  src: url("assts/Fonst/29ltbukrabolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Slider Styles */
+.homeSlider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeSlider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.homeSlider .slide.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.homeSlider .btnCont {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.homeSlider .btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.homeSlider .btn.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* End Slider Styles */
+
+body {
+  font-family: "Bukra", sans-serif;
+  font-weight: 400;
+  display: flex;
+  max-width: 100%;
+  height: fit-content;
+  max-height: max-content;
+  align-items: center;
+  justify-content: center;
+  scroll-behavior: smooth;
+  background-color: #1a1e21;
+  position: relative;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  background-color: #1a1e21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/* media Screens styling  */
+header {
+  width: 100%;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #1a1e21;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  z-index: 1000;
+}
+header .nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+header .nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 6);
+  height: 100%;
+  transition: all 0.4s;
+  border-bottom: solid transparent 0.5vh;
+}
+header .nav li:hover {
+  border-bottom: solid #30b34a 0.5vh;
+}
+header .nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  z-index: 1100;
+  font-weight: 600;
+}
+header .logo {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+header .logo h1 {
+  width: 20%;
+  height: 100%;
+  font-size: 2rem;
+  color: #30b34a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo img {
+  width: 70%;
+  height: 80%;
+}
+
+header .navBtn {
+  display: none;
+}
+header .navBtn ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60vh;
+  opacity: 0;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  background-color: #1a1e21;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.container div#home {
+  margin-top: 12vh;
+  width: 100%;
+  height: auto;
+  background-color: #1a1e21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container div#home .homeSlider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+}
+.container div#home .homeSlider .slide {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -100vh;
+  transition: all 0.5s;
+}
+.container div#home .homeSlider .slide.active {
+  top: 0;
+}
+.container div#home .homeSlider .slide.one {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+}
+.container div#home .homeSlider .slide.one::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/assts/باكجراوند/Asset\ 1.png");
+  background-size: cover;
+  z-index: 1;
+  box-shadow: inset 100vw 100vh 10px #000f2cbd;
+}
+.container div#home .homeSlider .slide.one .bgBut {
+  z-index: 100;
+  width: 80%;
+  height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row;
+}
+.container div#home .homeSlider .slide.one .bgBut h2 {
+  color: #fff;
+  font-size: 3.5rem;
+  width: 15%;
+  height: 80%;
+  display: flex;
+}
+
+.container div#home .homeSlider .slide.one .bgBut p {
+  color: #fff;
+  display: flex;
+  height: 80%;
+  width: 65%;
+  justify-content: start;
+  align-items: end;
+  position: relative;
+}
+.container div#home .homeSlider .slide.one .bgBut img {
+  width: 20%;
+  height: auto;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+.container div#home .homeSlider .slide.one .bgBut p::before {
+  content: "";
+  width: 20%;
+  height: 5px;
+  position: absolute;
+  bottom: 5px;
+  left: -21%;
+  background-color: #30b34a;
+}
+.container div#home .homeSlider .slide.one .content {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  text-align: end;
+  align-items: start;
+  justify-content: space-evenly;
+  line-height: 15vh;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+.container div#home .homeSlider .slide.one .content span {
+  color: #30b34a;
+}
+.container div#home .homeSlider .slide.one .content h1 {
+  font-weight: 800;
+  color: #fff;
+}
+
+.container div#home .homeSlider .slide.two {
+  width: 100%;
+  position: absolute;
+}
+.container div#home .homeSlider .slide.two .content {
+  width: 95vw;
+  height: 90vh;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+.container div#home .homeSlider .slide.two .content .box {
+  width: 25vw;
+  height: 20vh;
+  text-align: center;
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 600;
+  border-radius: 10px;
+  border: solid 0.5vh #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+.container div#home .homeSlider .slide.two .content .box:hover {
+  background-color: #30b34a;
+  border: #30b34a solid 0.5vh;
+}
+.container div#home .homeSlider .slide.two::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/assts/باكجراوند/Asset\ 2.png");
+  background-size: cover;
+  z-index: 1;
+  box-shadow: inset 100vw 100vh 10px #000f2cbd;
+}
+.container div#home .homeSlider .slide.three {
+  position: absolute;
+}
+.container div#home .homeSlider .slide.three::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/assts/باكجراوند/Asset\ 10.png");
+  background-size: cover;
+  z-index: 1;
+  box-shadow: inset 100vw 100vh 10px #000f2cbd;
+}
+.container div#home .homeSlider .slide.three img {
+  width: 90vw;
+  height: 70vh;
+  z-index: 100;
+}
+
+.container div#home .homeSlider .btnCont {
+  position: absolute;
+  z-index: 101;
+  width: 5vw;
+  height: 15vh;
+  top: 35vh;
+  left: 86vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh;
+}
+.container div#home .homeSlider .btnCont button {
+  width: 1.5vw;
+  height: 3vh;
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid 0.2vw #fff;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.container div#home .homeSlider .btnCont button:hover {
+  background-color: #30b34a;
+}
+.container div#home .homeSlider .btnCont button.active {
+  background-color: #30b34a;
+}
+
+.container div#about {
+  width: 100%;
+  height: max-content;
+  background-color: #1a1e21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+}
+.container div#about::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/assts/باكجراوند/Asset\ 1.png");
+  background-size: cover;
+  z-index: 0;
+  box-shadow: inset 100vw 100vh 10px #000f2cbd;
+}
+.container .texthead {
+  width: 70vw;
+  height: 15vh;
+  text-align: center;
+  color: #fff;
+  font-size: 4vw;
+  position: relative;
+  border-bottom: #fff solid 0.2vh;
+  z-index: 100;
+}
+.container .texthead::after {
+  content: "";
+  position: absolute;
+  width: 20vw;
+  height: 0.6vh;
+  background-color: #30b34a;
+  left: 25vw;
+  bottom: -0.4vh;
+  z-index: 1000;
+}
+.container div#about .content {
+  z-index: 100;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  text-align: end;
+  color: #fff;
+  gap: 5vw;
+}
+.container div#about .content img {
+  width: 25vw;
+  border-radius: 10px;
+  border: solid 0.7vh #30b34a;
+}
+.container div#about .content .text {
+  width: 45vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  z-index: 100;
+}
+.container div#about .content .text h2 {
+  color: #30b34a;
+  font-weight: 600;
+  font-size: 2vw;
+  padding-bottom: 1vh;
+  border-bottom: solid 0.6vh #30b34a;
+  height: 8vh;
+  margin: 0%;
+  width: 100%;
+}
+.container div#about .content .text p {
+  font-size: 1.5vw;
+  line-height: 8vh;
+  margin: 0%;
+  font-weight: 600;
+  width: 100%;
+}
+
+.container div#services {
+  width: 100%;
+  height: 120vh;
+  background-color: #1a1e21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container div#services::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/assts/باكجراوند/Asset\ 6.png");
+  background-size: cover;
+  z-index: 0;
+  box-shadow: inset 100vw 100vh 10px #000f2cbd;
+}
+.container div#services .servicesContent {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.container div#services .servicesContent .content {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+.container div#services .servicesContent .content .box {
+  width: 25vw;
+  height: 20vh;
+  text-align: center;
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 600;
+  border-radius: 10px;
+  border: solid 0.5vh #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+.container div#services .servicesContent .content .box:hover {
+  background-color: #30b34a;
+  border-color: #30b34a;
+}
+
+.container div#portfolio img {
+  width: 2vw;
+}
+.container div#portfolio {
+  width: 100%;
+  height: 360vh;
+  background-color: #1a1e21;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container div#portfolio .portfolioContent {
+  z-index: 100;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+.container div#portfolio .portfolioContent .text {
+  z-index: 100;
+  width: 100%;
+  margin-top: 5vh;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: column;
+}
+.container div#portfolio .portfolioContent .phead {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  font-size: 2vw;
+  color: #30b34a;
+}
+.container div#portfolio .portfolioContent .portfolioText {
+  z-index: 100;
+  width: 100%;
+  /* height: 35vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: column;
+}
+.container div#portfolio .portfolioContent .portfolioText p {
+  color: #fff;
+  font-size: 2vw;
+  width: 80%;
+  line-height: 8vh;
+  font-weight: 600;
+  direction: rtl;
+}
+.container div#portfolio .portfolioContent .portfolioText h2 {
+  margin: 0;
+  font-size: 3vw;
+  color: #30b34a;
+}
+
+.container div#portfolio .portfolioContent::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/assts/باكجراوند/Asset\ 7.png");
+  background-size: cover;
+  z-index: 1;
+  box-shadow: inset 100vw 100vh 10px #000f2cbd;
+}
+.container div#portfolio .portfolioContent .content {
+  width: 95vw;
+  height: 90vh;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+.container div#portfolio .portfolioContent .content .portfolioBox {
+  width: 25vw;
+  height: 35vh;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  border: solid 0.5vh #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 1vh;
+  transition: all 0.4s;
+}
+.container div#portfolio .portfolioContent .content .portfolioBox:hover {
+  background-color: #30b34a;
+  border-color: #30b34a;
+}
+
+.container div#portfolio .portfolioContent .content .portfolioBox p {
+  font-size: 1.2vw;
+  width: 95%;
+  height: fit-content;
+  line-height: 5vh;
+  font-weight: 600;
+}
+.container div#portfolio .portfolioContent .content .portfolioBox h3 {
+  font-size: 2vw;
+  padding-bottom: 1vh;
+  border-bottom: solid 0.3vh #fff;
+  width: 95%;
+}
+
+.container div#portfolio .portfolioSlider {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.container div#portfolio .portfolioSlider .sliderLogos {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #30b34a;
+  position: relative;
+}
+.container div#portfolio .portfolioSlider .sliderLogos .logoCont {
+  width: auto;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 5vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #30b34a;
+}
+.container div#portfolio .portfolioSlider .sliderLogos .logoCont img {
+  width: 8vw;
+  height: 100%;
+}
+.container
+  div#portfolio
+  .portfolioSlider
+  .sliderLogos
+  .logoCont
+  .btnCont-logos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 750px) {
+  header {
+    height: 50px;
+  }
+  header .nav {
+    display: none;
+  }
+  header .logo {
+    width: 25%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo h1 {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    font-size: 1rem;
+  }
+  header .logo img {
+    width: 50%;
+    height: auto;
+    display: flex;
+  }
+
+  header .navBtn {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    z-index: 1000;
+    transition: all 0.5s;
+    list-style: none;
+  }
+  header .navBtn i {
+    color: #30b34a;
+    font-weight: 600;
+    padding-left: 10%;
+    z-index: 1000;
+  }
+  header .navBtn .navMob {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60vh;
+    list-style: none;
+    flex-direction: column;
+  }
+  header .navBtn .navMob.show {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60vh;
+    opacity: 1;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-color: #1a1e21;
+    transition: all 0.5s;
+    z-index: 100;
+    list-style: none;
+    flex-direction: column;
+  }
+  header .navBtn .navMob li {
+    width: fit-content;
+    height: calc(100% / 12);
+    border-bottom: solid 2px transparent;
+  }
+  header .navBtn .navMob.show li:hover {
+    border-bottom: solid 2px #30b34a;
+  }
+
+  header .navBtn .navMob li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .container div#home .homeSlider .slide.one {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container div#home .homeSlider .slide.one .content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container div#home .homeSlider .slide.one .content img {
+    width: 25%;
+  }
+  .container div#home .homeSlider .slide.one .content h1 {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 2rem;
+  }
+  .container div#home .homeSlider .slide.one .bgBut {
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+    align-items: start;
+    justify-content: end;
+  }
+  .container div#home .homeSlider .slide.one .bgBut h2 {
+    font-size: 1.5rem;
+    width: 30%;
+    height: 30%;
+    align-items: center;
+    justify-content: end;
+  }
+  .container div#home .homeSlider .slide.one .bgBut img {
+    align-items: center;
+    width: 25%;
+    height: 30%;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p {
+    align-items: end;
+    font-size: 0.5rem;
+    width: 40%;
+    height: 30%;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p::before {
+    width: 50%;
+    height: 3px;
+    bottom: 1.5px;
+    left: -52%;
+  }
+
+  .container div#home .homeSlider .slide.two .content .box {
+    width: 35vw;
+    height: calc(90vh / 6);
+    font-size: 2.5vw;
+  }
+
+  .container div#home .homeSlider .btnCont {
+    top: 95vh;
+    left: 50%;
+    flex-direction: row;
+    width: 25vw;
+    height: 5vh;
+  }
+  .container div#home .homeSlider .btnCont button {
+    width: 5vw;
+  }
+  .container div#about .content {
+    flex-direction: column;
+    width: 100%;
+    height: 85vh;
+    align-items: center;
+  }
+  .container .texthead {
+    font-size: 5vw;
+    max-height: 10vh;
+  }
+
+  .container div#about .content img {
+    width: 35vw;
+  }
+  .container div#about .content .text {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    justify-content: start;
+    gap: 5vh;
+  }
+  .container div#about .content .text h2 {
+    font-size: 4vw;
+    padding-bottom: 0vh;
+    height: 5vh;
+  }
+  .container div#about .content .text p {
+    line-height: 4vh;
+    font-size: 3vw;
+  }
+
+  .container div#services .servicesContent .content .box {
+    width: 35vw;
+    height: calc(90vh / 6);
+    font-size: 2.5vw;
+  }
+
+  .container div#portfolio .portfolioContent .content .portfolioBox {
+    width: 35vw;
+    height: 20vh;
+  }
+  .container div#portfolio .portfolioContent .content .portfolioBox h3 {
+    font-size: 2.5vw;
+    height: 6vh;
+  }
+  .container div#portfolio .portfolioContent .content .portfolioBox p {
+    font-size: 1.5vw;
+    line-height: 3vh;
+  }
+
+  .container div#portfolio .portfolioContent .text {
+    height: 20vh;
+  }
+  .container div#portfolio .portfolioContent .text .phead {
+    font-size: 2.5vw;
+  }
+  .container div#portfolio .portfolioContent .portfolioText {
+    height: 25vh;
+    flex-direction: row;
+  }
+  .container div#portfolio .portfolioContent .portfolioText p {
+    font-size: 2.5vw;
+  }
+  .container div#portfolio .portfolioContent .portfolioText h2 {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 992px) {
+  header {
+    gap: 10%;
+  }
+  header .logo {
+    width: 20%;
+    gap: 0;
+  }
+  header .nav {
+    width: 65%;
+  }
+  header .logo h1 {
+    font-size: 1.7rem;
+  }
+  header .logo img {
+    width: 70%;
+    height: 60%;
+  }
+  header .nav li {
+    height: 50%;
+  }
+
+  .container div#home .homeSlider .slide.one {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .container div#home .homeSlider .slide.one .content {
+    align-items: center;
+    height: 40%;
+  }
+
+  .container div#home .homeSlider .slide.one .content img {
+    width: 25%;
+  }
+  .container div#home .homeSlider .slide.one .content h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+  .container div#home .homeSlider .slide.one .bgBut {
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+    align-items: start;
+    justify-content: center;
+  }
+  .container div#home .homeSlider .slide.one .bgBut h2 {
+    font-size: 2.5rem;
+    width: 25%;
+    height: 40%;
+    align-items: center;
+    justify-content: end;
+  }
+  .container div#home .homeSlider .slide.one .bgBut img {
+    align-items: center;
+    width: 25%;
+    height: 40%;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p {
+    align-items: end;
+    font-size: 1rem;
+    width: 40%;
+    height: 40%;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p::before {
+    width: 50%;
+    height: 3px;
+    bottom: 1.5px;
+    left: -52%;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  header .logo {
+    gap: 0;
+  }
+  header .logo img {
+    width: 100%;
+    height: 60%;
+  }
+  header .nav li {
+    height: 100%;
+  }
+  header .nav li a {
+    font-size: 1rem;
+  }
+
+  .container div#home .homeSlider .slide.one .bgBut {
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+  .container div#home .homeSlider .slide.one .bgBut h2 {
+    font-size: 4rem;
+    width: 40%;
+    height: 50%;
+    align-items: center;
+    justify-content: end;
+  }
+  .container div#home .homeSlider .slide.one .bgBut img {
+    width: 15%;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p {
+    align-items: end;
+    justify-content: start;
+    font-size: 1rem;
+    width: 30%;
+    height: 50%;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p::before {
+    width: 30%;
+    left: -30%;
+  }
+  .container div#home .homeSlider .slide.one .content {
+    width: 90%;
+    height: 50%;
+  }
+  .container div#home .homeSlider .slide.one .content img {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  header .logo {
+    gap: 0;
+  }
+  header .logo h1 {
+    font-size: 1.5rem;
+  }
+  header .logo img {
+    width: auto;
+    height: 80%;
+  }
+  header .nav li {
+    height: 70%;
+  }
+  header .nav li a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  header .logo {
+    gap: 0;
+    width: 15%;
+  }
+  header .logo h1 {
+    font-size: 3vw;
+  }
+  header .logo img {
+    width: 50%;
+    height: auto;
+    margin-left: -20%;
+  }
+  header .nav li:hover {
+    border-bottom: 0.7vh solid #30b34a;
+  }
+  header .nav li {
+    width: fit-content;
+    height: 50%;
+
+    border-bottom: 0.7vh solid transparent;
+  }
+  header .nav li a {
+    font-size: 1vw;
+  }
+
+  .container div#home .homeSlider .slide.one .content {
+    width: 100%;
+    height: 40%;
+    align-items: start;
+    justify-content: center;
+  }
+  .container div#home .homeSlider .slide.one .content h1 {
+    font-size: 4vw;
+  }
+  .container div#home .homeSlider .slide.one .content img {
+    width: 20vw;
+  }
+  .container div#home .homeSlider .slide.one .bgBut {
+    width: 100%;
+    height: 40%;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p {
+    width: 35%;
+    height: 80%;
+    font-size: 1vw;
+    align-items: center;
+  }
+  .container div#home .homeSlider .slide.one .bgBut p::before {
+    top: 50%;
+    height: 0.6vh;
+  }
+  .container div#home .homeSlider .slide.one .bgBut img {
+    width: 10vw;
+    margin-top: 2vh;
+  }
+  .container div#home .homeSlider .slide.one .bgBut h2 {
+    font-size: 5vw;
+    height: 80%;
+    width: 25%;
+    align-items: start;
+    justify-content: end;
+  }
+}

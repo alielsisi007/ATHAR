@@ -536,6 +536,62 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Scroll Animation Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  // Add animation classes to all sections
+  const sections = document.querySelectorAll('section, #home, #about, #services, #portfolio, #contact');
+  
+  // Add section-animate class to all sections
+  sections.forEach(section => {
+    if (!section.classList.contains('section-animate')) {
+      section.classList.add('section-animate');
+    }
+  });
+
+  // Function to check if element is in viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight * 0.8) &&
+      rect.bottom >= (window.innerHeight * 0.2)
+    );
+  }
+
+  // Function to handle scroll animations
+  function handleScrollAnimations() {
+    sections.forEach(section => {
+      if (isInViewport(section)) {
+        section.classList.add('animate-in');
+      } else if (window.scrollY === 0) {
+        // Reset animation when scrolling to top
+        section.classList.remove('animate-in');
+      }
+    });
+  }
+
+  // Initial check on page load
+  handleScrollAnimations();
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScrollAnimations);
+  
+  // Reset animations when clicking on navigation links
+  const navLinks = document.querySelectorAll('a[href^="#"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Remove all animate-in classes
+      sections.forEach(section => {
+        section.classList.remove('animate-in');
+      });
+      
+      // Add a small delay to allow the scroll to happen
+      setTimeout(() => {
+        handleScrollAnimations();
+      }, 100);
+    });
+  });
+});
+
 // Smooth Scrolling for Navigation Links
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("a[href^='#']");

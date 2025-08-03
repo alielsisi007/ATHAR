@@ -107,6 +107,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+  gap: 5vh;
 }
 /* media Screens styling  */
 header {
@@ -1041,17 +1042,23 @@ footer {
   }
 
   .container div#home .homeSlider .slide.one .content img {
-    width: 25%;
+    width: 30vw;
+  }
+  .container div#home .homeSlider .slide.one .content h1 br {
+    display: none;
   }
   .container div#home .homeSlider .slide.one .content h1 {
     font-size: 1.4rem;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
     flex-direction: column;
-    line-height: 2rem;
+    line-height: 10vh;
   }
+
   .container div#home .homeSlider .slide.one .bgBut {
     flex-direction: row;
     width: 100%;
@@ -1175,8 +1182,8 @@ footer {
     flex-direction: column;
   }
   .container div#portfolio .portfolioSlider .sliderLogos .logoCont img {
-    width: 10vw;
-    height: 50%;
+    width: 15vw;
+    height: 60%;
   }
 
   .container div#portfolio .portfolioSlider .brandesCont img,

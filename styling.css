@@ -1142,15 +1142,16 @@ footer {
   }
   .container div#portfolio .portfolioContent .content .portfolioBox {
     width: 35vw;
-    height: 20vh;
+    height: 22vh;
   }
   .container div#portfolio .portfolioContent .content .portfolioBox h3 {
     font-size: 2.5vw;
     height: 6vh;
   }
   .container div#portfolio .portfolioContent .content .portfolioBox p {
-    font-size: 1.5vw;
+    font-size: 2vw;
     line-height: 3vh;
+    margin: 0%;
   }
 
   .container div#portfolio .portfolioContent .text {
@@ -1199,6 +1200,34 @@ footer {
   footer .footerContent .footer-left,
   .footer-right {
     width: 100%;
+  }
+  .logo-section h2 {
+    font-size: 8vw;
+  }
+  .logo-section img {
+    width: 15vw;
+  }
+  .company-description {
+    font-size: 3.5vw;
+    text-align: right;
+    width: 80vw;
+  }
+  .footerContent .social-icon {
+    width: 14vw;
+    font-size: 6vw;
+  }
+  .services-section h3 {
+    font-size: 5vw;
+  }
+  .services-section h3::after {
+    width: 25vw;
+    height: 0.5vh;
+  }
+  .services-list li {
+    font-size: 4.5vw;
+  }
+  .services-list li::before {
+    font-size: 4.5vw;
   }
   .watsApp .social-icon {
     width: 13vw;
